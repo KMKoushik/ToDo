@@ -13,7 +13,7 @@ var ToDo = require('./models/todo');
 
 var app = express();
 
-var mongoDB = 'mongodb://127.0.0.1:27017/todo';
+var mongoDB = process.env.MONGODB_URI?process.env.MONGODB_URI:'mongodb://127.0.0.1:27017/todo';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -36,14 +36,12 @@ app.use(cors({
 }));
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 
 app.use('/api/v1/todo', todoApiRouter);
