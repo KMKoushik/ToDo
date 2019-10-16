@@ -20,7 +20,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 //Cors settings
 var allowedOrigins = ['http://localhost:3000',
-  'http://localhost:9000'];
+  'http://localhost:9000','https://simpleto-do.herokuapp.com'];
 app.use(cors({
   origin: function (origin, callback) {
     // allow requests with no origin 
