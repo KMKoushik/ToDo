@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "private": true,
    
-    "engines": {"node":"10.16.3"}
+    "engines": {"node":"10.16.3"},
+    "scripts": {
+    "heroku-postbuild":"cd client && npm install && npm run-script build "
+    }
   }
   
