@@ -23,17 +23,16 @@
 .modal-circle-close{
   float: right;
     /* border: 1px solid #b82312; */
-    border-radius: 50%;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: #ffffff00;
     color: #b82312;
-    font-size: 16px;
+    font-size: 24px;
     cursor: pointer;
     outline: none;
-    font-family: inherit;
-    font-weight: 700;
     border: none;
+    margin-top: -7px;
+    transform: rotateY(0deg) rotate(45deg);
 }
 
 

@@ -69,7 +69,8 @@
     font-size: 13px;
     margin-left: 2%;
     color: #e01b1b;
-    cursor: pointer;   
+    cursor: pointer;
+    transform: rotateY(0deg) rotate(45deg);   
 }
 
 .todo-submit-div{

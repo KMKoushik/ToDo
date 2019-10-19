@@ -60,7 +60,7 @@ class ToDoCard extends React.Component {
             <div className="todocard" >
                  <div style={{margin:"4%"}}>
                         <span className="todo-title">{this.props.name}</span>
-                        <button className="modal-circle-close" onClick={()=>this.removeToDO()}>X</button>
+                        <span className="modal-circle-close" onClick={()=>this.removeToDO()}>+</span>
                     </div>
                 <div style={{height:"100%"}} onClick={() => this.setState({ show: true })}>
                    

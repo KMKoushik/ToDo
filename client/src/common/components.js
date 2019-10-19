@@ -32,7 +32,7 @@ export class Modal extends React.Component {
                 <div className="modal-main">
                     <div className="modal-header">
                         <span style={{left:'50%',marginRight:"-7%"}}>{this.props.title}</span>
-                        <button className="modal-circle-close" onClick={() => this.props.handleClose()}>X</button>
+                        <button className="modal-circle-close" onClick={() => this.props.handleClose()}>+</button>
                     </div>
                     <div className="modal-body">
                         {this.props.children}
