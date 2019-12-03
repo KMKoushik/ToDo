@@ -1,8 +1,18 @@
  version: 2
  jobs:
    build:
-     docker:
-       - image: circleci/ruby:2.4.1
-     steps:
-       - checkout
-       - run: echo "A first hello"
+      docker:
+        - image: circleci/node:10.16.3
+      working_directory: ~/ToDo
+
+      steps:
+        - checkout
+        - restore_cache:
+            key: yarn-packages-{{ checksum "yarn.lock" }}
+        - run: yarn install --frozen-lockfile
+        - save_cache:
+            key: yarn-packages-{{ checksum "yarn.lock" }}
+            paths:
+              - ./cache/yarn
+        - run: yarn test
+        - run: echo "Success" 

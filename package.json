@@ -5,6 +5,7 @@
    
     "engines": {"node":"10.16.3"},
     "scripts": {
+    "test": "cd server && npm test",
     "heroku-postbuild":"cd client && npm install && npm run-script build "
     }
   }
